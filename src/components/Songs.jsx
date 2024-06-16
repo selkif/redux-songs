@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import { flexbox, space, layout, color } from "styled-system";
-import cardimg from "../assets/covers.jpg";
+
 
 const SongCard = styled.div`
   ${flexbox}
@@ -47,9 +47,7 @@ export default function Songs() {
       {songs.length > 0 ? (
         songs.map((song) => (
           <SongCard key={song.id} m={2}>
-            <div>
-              <img src={cardimg} alt="" />
-            </div>
+            
             <h1>{song.title}</h1>
             <h1>{song.genre}</h1>
             <h1>{song.artist}</h1>
